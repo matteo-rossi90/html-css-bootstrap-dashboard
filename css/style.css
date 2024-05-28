@@ -8,21 +8,16 @@
 .container-md,
 .container-ms,
 .container,
-.ms-container {
+.main-container {
     border: 1px dashed red;
     /* height: 100%; */
-}
-
-.ms-container{
-    overflow-y: auto;
-    display: flex;
-    flex-shrink: 0;
 }
 
 /* HEADER */
 
 header{
     background-color:#F8F9FA;
+    height: 60px;
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu{
@@ -45,13 +40,18 @@ header{
     background-color: green;
     border: 1px solid black;
     width: 150px;
-    /* height: calc(100vh - 60px) */
 }
 
 .col-11{
     background-color: violet;
-    /* height: calc(100vh - 60px); */
+    height: calc(100vh - 60px);
     width: calc(100% - 150px);
+}
+
+.main-container {
+    overflow-y: auto;
+    flex-shrink: 0;
+    height: 100%;
 }
 
 
