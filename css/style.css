@@ -4,9 +4,92 @@
     font-family:'Roboto' Trebuchet, sans-serif
 }
 
+.container-fluid,
+.container-md,
+.container-ms,
+.container,
+.ms-container {
+    border: 1px dashed red;
+    /* height: 100%; */
+}
+
+.ms-container{
+    overflow-y: auto;
+    display: flex;
+    flex-shrink: 0;
+}
+
 /* HEADER */
 
-/* BARRA DI SINISTRA */
+header{
+    background-color:#F8F9FA;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+    position: absolute;
+    left: -55px;
+}
+
+#logo-mob img{
+    max-height: 8%;
+    max-width: 8%;
+}
+
 
 /* PARTE CENTRALE */
+/* .row-height{ */
+    /* height: 100vh; */
+/* } */
+
+.col-1{
+    background-color: green;
+    border: 1px solid black;
+    width: 150px;
+    /* height: calc(100vh - 60px) */
+}
+
+.col-11{
+    background-color: violet;
+    /* height: calc(100vh - 60px); */
+    width: calc(100% - 150px);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* parte responsive */
+
+@media all and (max-width: 767px){
+
+    .hide,
+    #logo-lg img{
+        display: none;
+    }
+
+    #logo-mob img{
+        display: inline-flex;
+    }
+
+}
+
+@media all and (min-width: 768px){
+
+    .hide,
+    #logo-lg img {
+        display: inline-block;
+    }
+
+    #logo-mob img {
+        display: none;
+    }
+
+
+}
 
