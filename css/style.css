@@ -32,6 +32,16 @@ header{
     color: orange;
 }
 
+#position{
+    position: relative;
+}
+
+form i.fa-magnifying-glass{
+    position: absolute;
+    top: 30%;
+    padding: 0 10px;
+}
+
 /* PARTE CENTRALE */
 
 #col-sidenav{
@@ -111,16 +121,19 @@ header{
     font-size: 10px;
 }
 
-/* .card table tr{ */
-    /* border-bottom: 1px solid grey; */
-    /* margin: 5px; */
-/* } */
-
-
-
 /* headcrumbs */
+
 .ms-badge-color{
     background-color: #165BBA;
+}
+
+.breadcrumb li:hover .badge{
+    background-color: white;
+    color: black;
+}
+
+.breadcrumb li a{
+    font-size: 10px;
 }
 /*  */
 
@@ -131,6 +144,8 @@ header{
 
 @media all and (max-width: 768px){
 
+    /* scomparsa di logo barra in alto, oggetti breadcrumbs,
+    colonna date, opzioni menu barra in alto */
     .hide,
     #logo-lg img,
     .bread-hide,
@@ -138,14 +153,17 @@ header{
         display: none;
     }
 
+    /* comparsa logo mobile */
     #logo-mob img{
         display: inline-block;
     }
 
+    /* ridimensionamento sidenav in versione mobile */
     #col-sidenav{
         width: 65px;
     }
 
+    /* ridimensionamento main in versione mobile */
     #col-main {
         width: calc(100% - 65px);
     }
@@ -156,7 +174,7 @@ header{
 
 @media all and (min-width: 769px){
 
-
+    /* comparsa lementi nascosti in versione mobile */
     .hide,
     #logo-lg img {
         display: inline-block;
