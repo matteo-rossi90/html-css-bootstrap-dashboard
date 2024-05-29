@@ -1,16 +1,11 @@
 /* regole generiche */
 
 *{
-    font-family:'Roboto' Trebuchet, sans-serif
+    font-family:'Roboto', Trebuchet, sans-serif
 }
 
-.container-fluid,
-.container-md,
-.container-ms,
-.container,
-.main-container {
-    border: 1px dashed red;
-    /* height: 100%; */
+main{
+    padding-top: 60px;
 }
 
 /* HEADER */
@@ -20,9 +15,9 @@ header{
     height: 60px;
 }
 
-.navbar-expand-lg .navbar-nav .dropdown-menu{
+#position-dropdown{
     position: absolute;
-    left: -55px;
+    left: -125px;
 }
 
 #logo-mob img{
@@ -30,38 +25,102 @@ header{
     max-width: 8%;
 }
 
-
-/* PARTE CENTRALE */
-/* .row-height{ */
-    /* height: 100vh; */
-/* } */
-
-.col-1{
-    background-color: green;
-    border: 1px solid black;
-    width: 150px;
+.box-container{
+    display: flex;
 }
 
-.col-11{
-    background-color: violet;
+.fa-bell{
+    color: orange;
+}
+
+/* PARTE CENTRALE */
+
+#col-sidenav{
+    background-color: #051E34;
+    background-image: url('../img/sidebar-bg.png');
+    background-size: cover;
     height: calc(100vh - 60px);
-    width: calc(100% - 150px);
+    width: 130px;
+}
+
+#col-main{
+    background-color: #F8F9FA;
+    height: calc(100vh - 60px);
+    width: calc(100% - 130px);
 }
 
 .main-container {
     overflow-y: auto;
-    flex-shrink: 0;
     height: 100%;
 }
 
+/* topnav */
+
+#topnav {
+    width: 100%;
+    background-color: #1B72E8;
+}
+
+.container span,
+.card table th,
+.card table td{
+    font-size: 13px;
+}
+
+.btn-plus{
+    padding: 4px 10px;
+}
+
+/* sidenav */
+#sidenav-container{
+    height: 100%;
+}
+
+#sidenav-container li a:hover{
+    background-color:rgba(192, 208, 203, 0.6);
+    color:black;
+}
+
+/* cards */
+
+.card tr td{
+    cursor: pointer;
+}
+
+.card tr{
+    border-bottom: 1px solid rgb(212, 203, 203);
+}
+
+.card td img{
+    width: 20px;
+    height: 20px;
+}
+
+.card tr:hover td{
+    background-color: rgba(0,0,0,0.2)
+}
+
+.header{
+    font-size: 20px;
+}
+
+.btn-card{
+    padding: 5px 8px;
+    font-size: 10px;
+}
+
+/* .card table tr{ */
+    /* border-bottom: 1px solid grey; */
+    /* margin: 5px; */
+/* } */
 
 
 
-
-
-
-
-
+/* headcrumbs */
+.ms-badge-color{
+    background-color: #165BBA;
+}
+/*  */
 
 
 /* parte responsive */
@@ -69,12 +128,25 @@ header{
 @media all and (max-width: 767px){
 
     .hide,
-    #logo-lg img{
+    #logo-lg img,
+    .bread-hide{
         display: none;
     }
 
+    header form[role=search]{
+        width: 90%;
+    }
+
     #logo-mob img{
-        display: inline-flex;
+        display: inline-block;
+    }
+
+    #col-sidenav{
+        width: 65px;
+    }
+
+    #col-main {
+        width: calc(100% - 65px);
     }
 
 }
@@ -86,7 +158,8 @@ header{
         display: inline-block;
     }
 
-    #logo-mob img {
+    #logo-mob img,
+    #plus-bread {
         display: none;
     }
 
