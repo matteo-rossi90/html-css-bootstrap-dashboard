@@ -32,10 +32,6 @@ header{
     color: orange;
 }
 
-header form[role=search] {
-    width: 100%;
-}
-
 /* PARTE CENTRALE */
 
 #col-sidenav{
@@ -131,6 +127,8 @@ header form[role=search] {
 
 /* parte responsive */
 
+/* dispositivi mobile */
+
 @media all and (max-width: 768px){
 
     .hide,
@@ -138,10 +136,6 @@ header form[role=search] {
     .bread-hide,
     .hide-date{
         display: none;
-    }
-
-    header form[role=search]{
-        width: 85%;
     }
 
     #logo-mob img{
@@ -158,7 +152,10 @@ header form[role=search] {
 
 }
 
+/* dispositivi tablet */
+
 @media all and (min-width: 769px){
+
 
     .hide,
     #logo-lg img {
