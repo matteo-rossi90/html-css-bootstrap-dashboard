@@ -21,8 +21,7 @@ header{
 }
 
 #logo-mob img{
-    max-height: 8%;
-    max-width: 8%;
+    width: 40px;
 }
 
 .box-container{
@@ -31,6 +30,10 @@ header{
 
 .fa-bell{
     color: orange;
+}
+
+header form[role=search] {
+    width: 100%;
 }
 
 /* PARTE CENTRALE */
@@ -63,7 +66,10 @@ header{
 
 .container span,
 .card table th,
-.card table td{
+.card table td,
+.todo,
+.users,
+.btn-accordion{
     font-size: 13px;
 }
 
@@ -125,16 +131,17 @@ header{
 
 /* parte responsive */
 
-@media all and (max-width: 767px){
+@media all and (max-width: 768px){
 
     .hide,
     #logo-lg img,
-    .bread-hide{
+    .bread-hide,
+    .hide-date{
         display: none;
     }
 
     header form[role=search]{
-        width: 90%;
+        width: 85%;
     }
 
     #logo-mob img{
@@ -151,7 +158,7 @@ header{
 
 }
 
-@media all and (min-width: 768px){
+@media all and (min-width: 769px){
 
     .hide,
     #logo-lg img {
